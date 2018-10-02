@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Form Pegawai</h2>
+      <hr>
+      <label for="nama">Nama</label>
+      <input type="text" [(ngModel)]="nama" class="form-control">
+      <label for="nama">NIP</label>
+      <input type="text" [(ngModel)]="nip" class="form-control">
+      <label for="nama">Alamat</label>
+      <input type="text" [(ngModel)]="alamat" class="form-control">
+      <label for="nama">Jenis Kelamin</label>
+      <input type="text" [(ngModel)]="jk" class="form-control"> 
+      <br>
+      <button class="btn btn-primary" (click)="tambahData()">Tambah</button>
+    </div>
+  </div>
+  <div class="row" *ngFor="let pegawai of daftarPegawai">
+    <div class="col-md-12">
+      <h2>{{ pegawai.nama }}</h2>
+      <h3>{{ pegawai.nip }}</h3>
+      <p>{{ pegawai.jk }}</p>
+      <p>{{ pegawai.alamat }}</p>      
+    </div>    
+  </div>
+</div>

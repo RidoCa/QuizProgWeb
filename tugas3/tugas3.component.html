@@ -1,0 +1,4 @@
+<button class="btn btn-primary" (click) ="onClickLog()">Tampilkan Detail</button>
+<p>{{ tampil }}</p>
+<p *ngFor="let logs of log; let j = index" [ngClass]="{backColor: j >= 4}" 
+  [ngStyle]="{'color': j >= 4 ? 'white' : 'black'}">{{ logs }}</p>
